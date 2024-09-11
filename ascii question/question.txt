@@ -35,3 +35,4 @@ here is your question
 
 
 hint: use dot,slash and case as and when required
+      go to the url using the decrypted message
