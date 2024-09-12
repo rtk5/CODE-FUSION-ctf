@@ -1,24 +1,22 @@
-# Use the latest Ubuntu image
 FROM ubuntu:latest
 
-# Set environment variables to avoid interactive prompts during build
-ENV DEBIAN_FRONTEND=noninteractive
-
-# Create a user for the CTF challenge
+# Install necessary packages
 RUN useradd -m ctf && \
     apt-get update && \
-    apt-get install -y gcc make && \
-    apt-get clean
+    apt-get install -y gcc
 
-# Set the working directory
 WORKDIR /home/ctf
 
-# Copy the source code and Makefile into the container
-COPY segfault.c Makefile ./
+# Copy source code and compilation script
+COPY . .
 
-# Compile the program
-RUN make
+# Set permissions and compile
+RUN chown -R root:root /home/ctf && \
+    chmod -R 555 /home/ctf && \
+    ./compile.sh
 
-# Switch to the ctf user and set the entrypoint
 USER ctf
-ENTRYPOINT ["/home/ctf/segfault"]
+
+# Run the compiled binary
+CMD ["./segfault"]
+EXPOSE 1337

@@ -4,27 +4,48 @@
 #include <string.h>
 #include <unistd.h>
 
-void banner ();
+// Function prototypes
+void banner();
+void ignore();
+void flag(int signal, siginfo_t *siginfo, void *arg);
+void copy(char *string);
+void print_flag();
 
-void ignore () {
+// Flag stored as binary data
+static const char flag_data[] = {
+  // Your flag data in hexadecimal
+  0x49, 0x45, 0x45, 0x7b, 0x6c, 0x30, 0x30, 0x6b,
+  0x73, 0x5f, 0x6c, 0x69, 0x6b, 0x65, 0x5f, 0x77,
+  0x72, 0x31, 0x74, 0x69, 0x6e, 0x67, 0x5f, 0x73,
+  0x65, 0x67, 0x66, 0x34, 0x75, 0x6c, 0x74, 0x2d,
+  0x79, 0x5f, 0x63, 0x30, 0x64, 0x65, 0x7d
+};
+
+// Function to print the hidden flag
+void print_flag() {
+  printf("\nWell done!\n\n");
+  fwrite(flag_data, sizeof(flag_data), 1, stdout);
+  fflush(stdout);
+}
+
+void ignore() {
   alarm(10);
   setvbuf(stdout, NULL, _IONBF, 0);
   setvbuf(stdin, NULL, _IONBF, 0);
   setvbuf(stderr, NULL, _IONBF, 0);
 }
 
-void flag (int signal, siginfo_t *siginfo, void *arg) {
-  printf("\nWell done!\n\nIEEE{l00ks_lik3_y0u_lik3_wr1ting_segf4ult-y_c0d3}");
-  fflush(stdout);
+void flag(int signal, siginfo_t *siginfo, void *arg) {
+  print_flag();
   exit(0);
 }
 
-void copy (char *string) {
+void copy(char *string) {
   char string_copy[16];
   strcpy(string_copy, string);
 }
 
-int main () {
+int main() {
   struct sigaction s;
   memset(&s, 0, sizeof(struct sigaction));
   sigemptyset(&s.sa_mask);
@@ -48,7 +69,7 @@ int main () {
   return 0;
 }
 
-void banner () {
+void banner() {
   puts(
     "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n"
     "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣶⣿⣿⣿⣿⣿⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n"
