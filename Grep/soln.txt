@@ -1,0 +1,3 @@
+grep "FLAG-RAID" challenge.txt
+
+FLAG-RAID{Grep_minds_think_alike}

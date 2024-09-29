@@ -1,0 +1,1 @@
+FLAG-RAID{cats_are_awesome_aren't_theyexiftool -Comment ctf_challenge_image.jpg}
