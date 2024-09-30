@@ -10,22 +10,36 @@ int check_answer(const char *correct_answer, const char *user_answer) {
     return strcmp(correct_answer, user_answer) == 0;
 }
 
+// Function to convert a hex string back to ASCII
+void hex_to_string(const char *hex, char *output) {
+    while (*hex) {
+        sscanf(hex, "%2hhx", output++);
+        hex += 2;
+    }
+    *output = '\0';
+}
+
 int main() {
     char answer[MAX_ANSWER_LENGTH];
-    // Hardcoded answers
-    const char *answers[NUM_QUESTIONS] = {
-        "Devavrata",        // Answer to Question 1
-        "Vikarna",          // Answer to Question 2
-        "Kindama",          // Answer to Question 3
-        "Parashurama",      // Answer to Question 4
-        "Brahmastra",       // Answer to Question 5
-        "Krishna",          // Answer to Question 6
-        "Duryodhana",       // Answer to Question 7
-        "Abhimanyu",        // Answer to Question 8
-        "Dhrishtadyumna",   // Answer to Question 9
-        "Shikhandi"         // Answer to Question 10
+    char correct_answer[MAX_ANSWER_LENGTH];
+    
+    // Hex encoded answers
+    const char *hex_answers[NUM_QUESTIONS] = {
+        "446576617672617461",        // "Devavrata"
+        "56696b61726e61",            // "Vikarna"
+        "4b696e64616d61",            // "Kindama"
+        "5061726173687572616d61",    // "Parashurama"
+        "427261686d6173747261",      // "Brahmastra"
+        "4b726973686e61",            // "Krishna"
+        "447572796f6468616e61",      // "Duryodhana"
+        "416268696d616e7975",        // "Abhimanyu"
+        "44687269736874616479756d6e61", // "Dhrishtadyumna"
+        "5368696b68616e6469"         // "Shikhandi"
     };
     
+    // Hex encoded flag
+    const char *hex_flag = "464c41472d524149447b68315f746833725f50616e646176365f5072303a29217d"; // "FLAG-RAID{h1_th3r_Pandav6_Pr0:)!}"
+
     int question = 0;
 
     while (question < NUM_QUESTIONS) {
@@ -65,7 +79,10 @@ int main() {
         printf("Your answer: ");
         scanf("%s", answer);
 
-        if (check_answer(answers[question], answer)) {
+        // Convert the correct answer from hex to string
+        hex_to_string(hex_answers[question], correct_answer);
+
+        if (check_answer(correct_answer, answer)) {
             question++;
         } else {
             printf("Wrong answer! Back to the beginning...\n");
@@ -73,8 +90,12 @@ int main() {
         }
     }
 
+    // Convert the flag from hex to string
+    char flag[MAX_ANSWER_LENGTH];
+    hex_to_string(hex_flag, flag);
+    
     printf("Congratulations! You have answered all questions correctly.\n");
-    printf("Here is your flag: FLAG-RAID{h1_th3r_Pandav6_Pr0:)!}\n");
+    printf("Here is your flag: %s\n", flag);
 
     return 0;
 }

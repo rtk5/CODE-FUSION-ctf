@@ -3,3 +3,6 @@ Cat is a really powerful species. Its no wonder many tools are named after them.
 (attach combined_image.img.gz)
 
 hint the original file size was only 12950
+
+
+hint(chmod +x)
