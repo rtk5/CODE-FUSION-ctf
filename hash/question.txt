@@ -1,0 +1,9 @@
+Challenge Title: Password Cracking Challenge
+
+Description:
+
+Your mission is to crack the password for the following hash. The flag will be revealed once you successfully find the password.
+
+Hash: 10cade8f184dd3edaa6f6d359396177f
+
+Hint: The password is easy!

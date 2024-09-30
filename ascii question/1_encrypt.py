@@ -28,7 +28,7 @@ def reverse_words(sentence):
 
 
 # Example usage
-sentence = "Happy and smart teens eagerly begin innovating, navigating challenges of modernity. Sharing hobbies, ambitions, resilience emerges. Ideas spread, energizing quests, expanding wisdom, uplifting quiet urban xplorers. Courageously solving hard algorithms, refining problems."
+sentence = "Happy adventurers search through experiences, building ideas naturally.Curiosity opens minds.Smart humans always reach elevated xcellence, inventing great unique zealous objectives.Confidence shapes hard actions, reviving potential."
 #Include dot and slash where required.
 reversed_sentence = reverse_words(sentence)
 print(reversed_sentence)

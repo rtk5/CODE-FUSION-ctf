@@ -1,38 +1,33 @@
-Happy and smart teens eagerly begin innovating, navigating challenges of modernity. Sharing hobbies, ambitions, resilience emerges. Ideas spread, energizing quests, expanding wisdom, uplifting quiet urban xplorers. Courageously solving hard algorithms, refining problems.Include dot and slash where required.
+https://hastebin.com/share/xizihiguzo.csharp
 
-yppaH dna trams sneet ylregae nigeb ,gnitavonni gnitagivan segnellahc fo ytinredom. gnirahS ,seibboh ,snoitibma ecneiliser segreme. saedI ,daerps gnizigrene ,stseuq gnidnapxe ,modsiw gnitfilpu teiuq nabru srerolpx. ylsuoegaruoC gnivlos drah ,smhtirogla gninifer smelborp.
+sentence = "Happy adventurers search through experiences, building ideas naturally.Curiosity opens minds.Smart humans always reach elevated xcellence, inventing great unique zealous objectives.Confidence shapes hard actions, reviving potential."
 
-bkkzS wmz giznh hmvvg boivtzv mrtvy ,tmrgzelmmr tmrgztrezm hvtmvoozsx ul bgrmivwln. tmrizsH ,hvryyls ,hmlrgrynz vxmvrorhvi hvtivnv. hzvwR ,wzvikh tmrartivmv ,hghvfj tmrwmzkcv ,nlwhrd tmrgurokf gvrfj mzyif hivilokc. bohflvtziflX tmreolh wizs ,hnsgriltoz tmrmruvi hnvoylik.
+yppaH srerutnevda hcraes hguorht ,secneirepxe gnidliub saedi yllarutan.ytisoiruC snepo sdnim.tramS snamuh syawla hcaer detavele ,ecnellecx gnitnevni taerg euqinu suolaez sevitcejbo.ecnedifnoC sepahs drah ,snoitca gniviver laitnetop.
+
+bkkzS hivifgmvewz sxizvh stflisg ,hvxmvrivkcv tmrworfy hzvwr boozifgzm.bgrhlrifX hmvkl hwmrn.giznH hmznfs hbzdoz sxzvi wvgzevov ,vxmvoovxc tmrgmvemr gzvit vfjrmf hflozva hvergxvqyl.vxmvwrumlX hvkzsh wizs ,hmlrgxz tmrerevi ozrgmvglk.
 
 98,107,107,122,83
-119,109,122
-103,105,122,110,104
-104,109,118,118,103
-98,111,105,118,116,122,118
-109,114,116,118,121
-44,116,109,114,103,122,101,108,109,109,114
-116,109,114,103,122,116,114,101,122,109
-104,118,116,109,118,111,111,122,115,120
-117,108
-98,103,114,109,105,118,119,108,110,46
-116,109,114,105,122,115,72
-44,104,118,114,121,121,108,115
-44,104,109,108,114,103,114,121,110,122
-118,120,109,118,114,111,114,104,118,105
-104,118,116,105,118,110,118,46
-104,122,118,119,82
-44,119,122,118,105,107,104
-116,109,114,97,114,116,105,118,109,118
-44,104,103,104,118,102,106
-116,109,114,119,109,122,107,99,118
-44,110,108,119,104,114,100
-116,109,114,103,117,114,111,107,102
-103,118,114,102,106
-109,122,121,105,102
-104,105,118,105,108,111,107,99,46
-98,111,104,102,108,118,116,122,105,102,108,88
-116,109,114,101,111,108,104
+104,105,118,105,102,103,109,118,101,119,122
+115,120,105,122,118,104
+115,116,102,108,105,115,103
+44,104,118,120,109,118,114,105,118,107,99,118
+116,109,114,119,111,114,102,121
+104,122,118,119,114
+98,111,111,122,105,102,103,122,109,46,98,103,114,104,108,114,105,102,88
+104,109,118,107,108
+104,119,109,114,110,46,103,105,122,110,72
+104,109,122,110,102,115
+104,98,122,100,111,122
+115,120,122,118,105
+119,118,103,122,101,118,111,118
+44,118,120,109,118,111,111,118,120,99
+116,109,114,103,109,118,101,109,114
+103,122,118,105,116
+118,102,106,114,109,102
+104,102,108,111,122,118,97
+104,118,101,114,103,120,118,113,121,108,46,118,120,109,118,119,114,117,109,108,88
+104,118,107,122,115,104
 119,105,122,115
-44,104,110,115,103,114,105,108,116,111,122
-116,109,114,109,114,117,118,105
-104,110,118,111,121,108,105,107,46
+44,104,109,108,114,103,120,122
+116,109,114,101,114,101,118,105
+111,122,114,103,109,118,103,108,107,46

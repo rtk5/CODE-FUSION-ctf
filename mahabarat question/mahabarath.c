@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include<stdlib.h>
+#include <stdlib.h>
 
 #define MAX_ANSWER_LENGTH 100
 #define NUM_QUESTIONS 10
@@ -10,28 +10,23 @@ int check_answer(const char *correct_answer, const char *user_answer) {
     return strcmp(correct_answer, user_answer) == 0;
 }
 
-// Function to read answers from file
-void read_answers_from_file(const char *filename, char answers[NUM_QUESTIONS][MAX_ANSWER_LENGTH]) {
-    FILE *file = fopen(filename, "r");
-    if (file == NULL) {
-        perror("Failed to open answers file");
-        exit(1);
-    }
-    for (int i = 0; i < NUM_QUESTIONS; i++) {
-        if (fgets(answers[i], MAX_ANSWER_LENGTH, file) != NULL) {
-            // Remove newline character if present
-            answers[i][strcspn(answers[i], "\n")] = '\0';
-        }
-    }
-    fclose(file);
-}
-
 int main() {
     char answer[MAX_ANSWER_LENGTH];
-    char answers[NUM_QUESTIONS][MAX_ANSWER_LENGTH];
+    // Hardcoded answers
+    const char *answers[NUM_QUESTIONS] = {
+        "Devavrata",        // Answer to Question 1
+        "Vikarna",          // Answer to Question 2
+        "Kindama",          // Answer to Question 3
+        "Parashurama",      // Answer to Question 4
+        "Brahmastra",       // Answer to Question 5
+        "Krishna",          // Answer to Question 6
+        "Duryodhana",       // Answer to Question 7
+        "Abhimanyu",        // Answer to Question 8
+        "Dhrishtadyumna",   // Answer to Question 9
+        "Shikhandi"         // Answer to Question 10
+    };
+    
     int question = 0;
-
-    read_answers_from_file("answers.txt", answers);
 
     while (question < NUM_QUESTIONS) {
         switch (question) {
@@ -42,7 +37,7 @@ int main() {
                 printf("Question 2: Who was the eldest Kaurava after Duryodhana and Dushasana?\n");
                 break;
             case 2:
-                printf("Question 3: What was the curse on Pandu that prevented him from having children?\n");
+                printf("Question 3: Who cursed Pandu preventing him from birthing children?\n");
                 break;
             case 3:
                 printf("Question 4: Who was Karna’s teacher?\n");
@@ -66,8 +61,10 @@ int main() {
                 printf("Question 10: Who could change their gender at will in the Mahabharata?\n");
                 break;
         }
+
         printf("Your answer: ");
         scanf("%s", answer);
+
         if (check_answer(answers[question], answer)) {
             question++;
         } else {
@@ -77,7 +74,7 @@ int main() {
     }
 
     printf("Congratulations! You have answered all questions correctly.\n");
-    printf("Here is your flag: IEEE{h1_th3r_Pandav6_Pr0:)!}\n");
+    printf("Here is your flag: FLAG-RAID{h1_th3r_Pandav6_Pr0:)!}\n");
 
     return 0;
 }
