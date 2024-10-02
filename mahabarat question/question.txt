@@ -5,4 +5,4 @@ Cat is a really powerful species. Its no wonder many tools are named after them.
 hint the original file size was only 12950
 
 
-hint(chmod +x)
+hint(change the permissions of a file or directory)
