@@ -26,7 +26,7 @@ A mysterious QR code is handed to you, leading to a deleted blog post. This seem
 5. **Decrypt the Flag:** Apply the translated cipher technique to decode the encrypted text and reveal the flag.
 
 #### Flag Format:
-`FLAG-RAID{[decrypted flag text]}`
+`FLAG-RAID{Th3Tim3-K33p3rs_hav3bui1tqu1t3th3c1rcus}`
 
 #### Additional Notes: 
 Ensure you follow the instructions from the Wayback Machine closely to retrieve the correct version of the page.
